@@ -38,11 +38,11 @@ const studenti = [
 ]
 
 // NOMI STUDENTI IN MAIUSCOLO
-const studentiMaiuscoli = studenti.map((nome) => nome.name.toUpperCase());
+const studentiMaiuscoli = studenti.map((element) => element.name.toUpperCase());
 console.log(studentiMaiuscoli);
 
 // STUDENTI CON VOTI SUPERIORE A 70
-const studentiBravi = studenti.filter((voto) => voto.grades > 70);
+const studentiBravi = studenti.filter((element) => element.grades > 70);
 console.log(studentiBravi);
 
 //STUDENTI CON VOTI SUPERIORI A 70 E ID SUPERIORE A 120
