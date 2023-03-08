@@ -84,10 +84,16 @@ ul::-webkit-scrollbar-thumb
 li{
     list-style: none;
     padding: 5px 20px;
-    background-color: white;
+    background-color: rgb(235, 231, 231);
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 5px;
     border-radius: 15px;
+}
+
+li.firstChild{
+    background-color: rgb(108, 105, 105);
+    color: white;
+    font-weight: bolder;
 }
