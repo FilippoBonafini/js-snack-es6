@@ -36,3 +36,8 @@ const studenti = [
         grades: 84
     }
 ]
+
+// NOMI STUDENTI IN MAIUSCOLO
+const studentiMaiuscoli = studenti.map((nome) => nome.name.toUpperCase());
+console.log (studentiMaiuscoli);
+
