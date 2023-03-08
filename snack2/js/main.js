@@ -41,3 +41,7 @@ const studenti = [
 const studentiMaiuscoli = studenti.map((nome) => nome.name.toUpperCase());
 console.log (studentiMaiuscoli);
 
+// STUDENTI CON VOTI SUPERIORE A 70
+const studentiBravi = studenti.filter((voto) => voto.grades>70);
+console.log(studentiBravi);
+
