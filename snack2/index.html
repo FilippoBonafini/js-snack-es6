@@ -5,9 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SNACK 2</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
+    <header>SNACK 2</header>
+
+    <main>
+
+        <ul id="studenti">
+            <h2>Studenti</h2>
+        </ul>
+
+        <ul id="studentiMaiuscoli">
+            <h2>Nomi</h2>
+        </ul>
+
+        <ul id="studentiBravi">
+            <h2>I più bravi</h2>
+        </ul>
+
+        <ul id="studentiSelezionati">
+            <h2>Selezionati</h2>
+        </ul>
+
+    </main>
+
+    <template id="studentiTemplate">
+        <li>
+            <div class="idStudente"></div>
+            <div class="nomeStudente"></div>
+            <div class="votiStudente"></div>
+        </li>
+    </template>
+
     <script src="js/main.js"></script>
 </body>
 </html>
