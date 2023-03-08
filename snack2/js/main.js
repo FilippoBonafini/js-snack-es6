@@ -57,6 +57,8 @@ const ulContainerstudentiMaiuscoli = document.getElementById('studentiMaiuscoli'
 const ulContainerstudentiBravi = document.getElementById('studentiBravi');
 const ulContainerstudentiSelezionati = document.getElementById('studentiSelezionati');
 
+
+// FUNZIONE PER CREARE I LI PARTENDO DA UN TEMPLATE 
 function applyTemplate(templateContainer,arrayDiPartenza) {
     for (let i = 0; i < arrayDiPartenza.length; i++) {
         const studente = arrayDiPartenza[i];
