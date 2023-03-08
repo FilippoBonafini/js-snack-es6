@@ -57,20 +57,24 @@ const ulContainerstudentiMaiuscoli = document.getElementById('studentiMaiuscoli'
 const ulContainerstudentiBravi = document.getElementById('studentiBravi');
 const ulContainerstudentiSelezionati = document.getElementById('studentiSelezionati');
 
+function applyTemplate(templateContainer,arrayDiPartenza) {
+    for (let i = 0; i < arrayDiPartenza.length; i++) {
+        const studente = arrayDiPartenza[i];
+        const studentiTemplate = template.content.cloneNode(true);
 
+        studentiTemplate.querySelector('.idStudente').innerHTML = studente.id;
+        studentiTemplate.querySelector('.nomeStudente').innerHTML = studente.name;
+        studentiTemplate.querySelector('.votiStudente').innerHTML = studente.grades;
 
-for (let i = 0;i< studenti.length; i++) {
-    const studente = studenti[i];
-    const studentiTemplate = template.content.cloneNode(true);
-
-    studentiTemplate.querySelector('.idStudente').innerHTML = studente.id;
-    studentiTemplate.querySelector('.nomeStudente').innerHTML = studente.name;
-    studentiTemplate.querySelector('.votiStudente').innerHTML = studente.grades;
-
-    ulContainerStudenti.append(studentiTemplate);
+        templateContainer.append(studentiTemplate);
+    }
 }
 
-for (let i = 0;i< studentiMaiuscoli.length; i++) {
+applyTemplate(ulContainerStudenti,studenti);
+applyTemplate(ulContainerstudentiBravi,studentiBravi);
+applyTemplate(ulContainerstudentiSelezionati,studentiSelezionati);
+
+for (let i = 0; i < studentiMaiuscoli.length; i++) {
     const studente = studentiMaiuscoli[i];
     const studentiTemplate = template.content.cloneNode(true);
 
@@ -81,24 +85,37 @@ for (let i = 0;i< studentiMaiuscoli.length; i++) {
     ulContainerstudentiMaiuscoli.append(studentiTemplate);
 }
 
-for (let i = 0;i< studentiBravi.length; i++) {
-    const studente = studentiBravi[i];
-    const studentiTemplate = template.content.cloneNode(true);
 
-    studentiTemplate.querySelector('.idStudente').innerHTML = studente.id;
-    studentiTemplate.querySelector('.nomeStudente').innerHTML = studente.name;
-    studentiTemplate.querySelector('.votiStudente').innerHTML = studente.grades;
+// for (let i = 0; i < studenti.length; i++) {
+//     const studente = studenti[i];
+//     const studentiTemplate = template.content.cloneNode(true);
 
-    ulContainerstudentiBravi.append(studentiTemplate);
-}
+//     studentiTemplate.querySelector('.idStudente').innerHTML = studente.id;
+//     studentiTemplate.querySelector('.nomeStudente').innerHTML = studente.name;
+//     studentiTemplate.querySelector('.votiStudente').innerHTML = studente.grades;
 
-for (let i = 0;i< studentiSelezionati.length; i++) {
-    const studente = studentiSelezionati[i];
-    const studentiTemplate = template.content.cloneNode(true);
+//     ulContainerStudenti.append(studentiTemplate);
+// }
 
-    studentiTemplate.querySelector('.idStudente').innerHTML = studente.id;
-    studentiTemplate.querySelector('.nomeStudente').innerHTML = studente.name;
-    studentiTemplate.querySelector('.votiStudente').innerHTML = studente.grades;
- 
-    ulContainerstudentiSelezionati.append(studentiTemplate);
-}
+
+// for (let i = 0; i < studentiBravi.length; i++) {
+//     const studente = studentiBravi[i];
+//     const studentiTemplate = template.content.cloneNode(true);
+
+//     studentiTemplate.querySelector('.idStudente').innerHTML = studente.id;
+//     studentiTemplate.querySelector('.nomeStudente').innerHTML = studente.name;
+//     studentiTemplate.querySelector('.votiStudente').innerHTML = studente.grades;
+
+//     ulContainerstudentiBravi.append(studentiTemplate);
+// }
+
+// for (let i = 0; i < studentiSelezionati.length; i++) {
+//     const studente = studentiSelezionati[i];
+//     const studentiTemplate = template.content.cloneNode(true);
+
+//     studentiTemplate.querySelector('.idStudente').innerHTML = studente.id;
+//     studentiTemplate.querySelector('.nomeStudente').innerHTML = studente.name;
+//     studentiTemplate.querySelector('.votiStudente').innerHTML = studente.grades;
+
+//     ulContainerstudentiSelezionati.append(studentiTemplate);
+// }
