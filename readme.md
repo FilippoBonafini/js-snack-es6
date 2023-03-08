@@ -6,3 +6,12 @@
 - salvare il nome del tavolo
 - ciclare l'array e creare un oggetto per ogni invitato
 -pushare l'oggeto in un array finale
+
+--------------------------------------------
+
+# SNACK 2 
+#### Abbiamo un elenco degli studenti di una facoltà, identificati da _id_, _Nome_ e _somma totale_ dei loro voti di esame...
+1. Per preparare l’aula di un nuovo corso, dobbiamo stampare le targhe col nome degli studenti: creare una lista contenente il loro nome tutto in maiuscolo UTILIZZANDO MAP
+ES (Marco della Rovere => MARCO DELLA ROVERE);
+2. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 UTILIZZANDO FILTER
+3. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120 UTILIZZANDO FILTER
