@@ -9,8 +9,8 @@ const invitati = [
     'Georgina Rodriguez',
     'Chiara Ferragni',
     'Fedez',
-    'George Clooney', 
-    'Amal Clooney', 
+    'George Clooney',
+    'Amal Clooney',
     'Maneskin'
 ];
 
@@ -21,14 +21,14 @@ const elencoInvitati = [];
 console.log(invitati);
 console.log(tavolo);
 
-invitati.forEach((element,index) =>{
+invitati.forEach((element, index) => {
     const person = [{
         nome: element,
         tavolo: tavolo,
         posto: index + 1
     }];
     elencoInvitati.push(person);
-    console.log ("Nel "+tavolo+ " c'è "+element+' al posto '+(index+1));
-})
+    console.log("Nel " + tavolo + " c'è " + element + ' al posto ' + (index + 1));
+});
 
-console.log(elencoInvitati)
+console.log(elencoInvitati);
