@@ -85,7 +85,6 @@ for (let i = 0;i< studentiBravi.length; i++) {
     const studente = studentiBravi[i];
     const studentiTemplate = template.content.cloneNode(true);
 
-    console.log(studente)
     studentiTemplate.querySelector('.idStudente').innerHTML = studente.id;
     studentiTemplate.querySelector('.nomeStudente').innerHTML = studente.name;
     studentiTemplate.querySelector('.votiStudente').innerHTML = studente.grades;
