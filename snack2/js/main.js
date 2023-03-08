@@ -48,3 +48,58 @@ console.log(studentiBravi);
 //STUDENTI CON VOTI SUPERIORI A 70 E ID SUPERIORE A 120
 const studentiSelezionati = studentiBravi.filter((element) => element.id > 120);
 console.log(studentiSelezionati);
+
+
+
+const template = document.getElementById('studentiTemplate');
+const ulContainerStudenti = document.getElementById('studenti');
+const ulContainerstudentiMaiuscoli = document.getElementById('studentiMaiuscoli');
+const ulContainerstudentiBravi = document.getElementById('studentiBravi');
+const ulContainerstudentiSelezionati = document.getElementById('studentiSelezionati');
+
+
+
+for (let i = 0;i< studenti.length; i++) {
+    const studente = studenti[i];
+    const studentiTemplate = template.content.cloneNode(true);
+
+    studentiTemplate.querySelector('.idStudente').innerHTML = studente.id;
+    studentiTemplate.querySelector('.nomeStudente').innerHTML = studente.name;
+    studentiTemplate.querySelector('.votiStudente').innerHTML = studente.grades;
+
+    ulContainerStudenti.append(studentiTemplate);
+}
+
+for (let i = 0;i< studentiMaiuscoli.length; i++) {
+    const studente = studentiMaiuscoli[i];
+    const studentiTemplate = template.content.cloneNode(true);
+
+    studentiTemplate.querySelector('.idStudente').remove();
+    studentiTemplate.querySelector('.nomeStudente').innerHTML = studente;
+    studentiTemplate.querySelector('.votiStudente').remove();
+
+    ulContainerstudentiMaiuscoli.append(studentiTemplate);
+}
+
+for (let i = 0;i< studentiBravi.length; i++) {
+    const studente = studentiBravi[i];
+    const studentiTemplate = template.content.cloneNode(true);
+
+    console.log(studente)
+    studentiTemplate.querySelector('.idStudente').innerHTML = studente.id;
+    studentiTemplate.querySelector('.nomeStudente').innerHTML = studente.name;
+    studentiTemplate.querySelector('.votiStudente').innerHTML = studente.grades;
+
+    ulContainerstudentiBravi.append(studentiTemplate);
+}
+
+for (let i = 0;i< studentiSelezionati.length; i++) {
+    const studente = studentiSelezionati[i];
+    const studentiTemplate = template.content.cloneNode(true);
+
+    studentiTemplate.querySelector('.idStudente').innerHTML = studente.id;
+    studentiTemplate.querySelector('.nomeStudente').innerHTML = studente.name;
+    studentiTemplate.querySelector('.votiStudente').innerHTML = studente.grades;
+ 
+    ulContainerstudentiSelezionati.append(studentiTemplate);
+}
