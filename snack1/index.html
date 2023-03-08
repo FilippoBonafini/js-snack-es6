@@ -7,10 +7,32 @@
     <title>Snack 1</title>
     <!-- import css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
+    <header>ELENCO INVITATI</header>
 
+    <main>
+        <ul id="listaInvitati">
+            <li class="headerList">
+                <div class="headerTavolo">Nome Tavolo:</div>
+                <div class="headerPosto">Posto n.</div>
+                <div class="headerNome">Nome Cliente</div>
+            </li>
+        </ul>
+    </main>
+
+    <template id="invitatiTemplate">
+        <li>
+            <div class="tavolo"></div>
+            <div class="posto"></div>
+            <div class="nome"></div>
+        </li>
+    </template>
     <!-- import js -->
     <script src="js/main.js"></script>
 </body>
