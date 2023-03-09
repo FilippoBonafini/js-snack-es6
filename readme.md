@@ -5,7 +5,7 @@
 - creare l'array contenente i partecipanti
 - salvare il nome del tavolo
 - ciclare l'array e creare un oggetto per ogni invitato
--pushare l'oggeto in un array finale
+- pushare l'oggeto in un array finale
 
 --------------------------------------------
 
@@ -15,3 +15,15 @@
 ES (Marco della Rovere => MARCO DELLA ROVERE);
 2. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 UTILIZZANDO FILTER
 3. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120 UTILIZZANDO FILTER
+
+-----------------------------------------------
+
+# SNAKE 3
+
+#### Creare un array di oggetti: Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso. Stampare in console la bici con peso minore utilizzando destructuring e template literal.
+
+## RISOLUZIONE:
+- creare l'array di oggetti contenente le bici
+- distrutturare gli oggetti dell'array prendendo solo i pesi 
+- inserire la bici con peso minore in una variabile e stamparla in console e sullo schermo
+
