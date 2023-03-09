@@ -1,4 +1,21 @@
 'use strict';
+// FUNZIONI
+
+// FUNZIONE CHE APPLICA DEI DATI AD UN TEMPLATE E APPLICA UNA CLASSE
+function applyTemplate(templateContainer, arrayDiPartenza) {
+    arrayDiPartenza.forEach(element => {
+        const biciTemplate = template.content.cloneNode(true);
+
+        biciTemplate.querySelector('.proprietarioBici').innerHTML = element.nome;
+        biciTemplate.querySelector('.pesoBici').innerHTML = element.peso;
+
+        if(element.nome === proprietarioMinore){
+            biciTemplate.querySelector('li').classList.add('selected');
+        }
+
+        templateContainer.append(biciTemplate);
+    });
+}
 
 // MAIN 
 // array di oggetti: biciclette
@@ -60,3 +77,9 @@ biciclette.forEach(element => {
 
 // SCRIVO COL TEMPLATE LITERAL IL RISULTATO
 console.log(`La bicicletta di ${proprietarioMinore} pesa ${pesoMinore}Kg. E' quella che pesa di meno!`)
+
+
+// APPLICO IL RISULTATO NELL'HTML 
+const template = document.getElementById('biciTemplate');
+const listaBici = document.getElementById('listaBici');
+applyTemplate(listaBici, biciclette);
