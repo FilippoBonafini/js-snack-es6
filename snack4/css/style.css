@@ -60,6 +60,11 @@ li{
     font-size: 20px;
 }
 
+li.liHeader{
+    font-size: 27px;
+    font-weight: bolder;
+}
+
 li div{
     display: flex;
     align-items: center;
