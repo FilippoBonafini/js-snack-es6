@@ -3,5 +3,109 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 /* --------- */
+/* COMMON */
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(196, 196, 196);
+}
+/* --------- */
+/* HEADER  */
+header{
+    background-color: rgb(24, 24, 24);
+    padding: 20px 60px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+/* --------- */
+/* MAIN  */
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: rgb(14, 14, 14);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+    width: 1200px;
+    border-radius: 30px;
+}
+
+ul{
+    background-color: rgb(187, 186, 186);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(187, 186, 186);
+    width: 450px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+li div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+li div.nomeSquadra{
+    width: 200px;
+}
+
+div.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    color: rgb(187, 186, 186);
+}
+
+div.arrowDown{
+    display: none;
+}
+
+@media screen and ( max-width:1150px ) {
+    .container{
+        margin-top: 90px;
+    }
+    div.arrow{
+        width: 100%;
+    }
+    ul{
+        width: 100%;
+    }
+    li{
+        width: 100%;
+    }
+    div.arrowDestra{
+        display: none;
+    }
+    div.arrowDown{
+        display: flex;
+    }
+}
+
+@media screen and ( max-width:1150px ) {
+    .container{
+        margin-top: 0;
+        border-radius: 0;
+    }
+}

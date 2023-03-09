@@ -7,6 +7,18 @@ function randomNumber() {
     return Math.floor(Math.random() * (50 - 10 + 1) + 10)
 }
 
+// FUNZIONE CHE APPLICA DEI DATI AD UN TEMPLATE 
+function applyTemplate(templateContainer, arrayDiPartenza) {
+    arrayDiPartenza.forEach(element => {
+        const studentiTemplate = template.content.cloneNode(true);
+
+        studentiTemplate.querySelector('.nomeSquadra').innerHTML = element.nomeSquadra;
+        studentiTemplate.querySelector('.puntiSquadra').innerHTML = element.punti;
+        studentiTemplate.querySelector('.falliSquadra').innerHTML = element.falli;
+
+        templateContainer.append(studentiTemplate);
+    });
+}
 
 // -------------------------------------------------------
 // MAIN 
@@ -44,6 +56,12 @@ const squadre = [
         falli: 0
     },
 ];
+
+
+const template = document.getElementById('templateRow');
+const containerDefault = document.getElementById('squadreZero');
+const containerAfter = document.getElementById('squadreScore');
+
 console.log('Array di partenza:')
 console.log(squadre)
 console.log('')
@@ -65,5 +83,9 @@ const nuoviScore = squadre.map(element => {
 });
 
 // STAMPO IL NUOVO ARRAY
-console.log('Array finale') 
+console.log('Array finale');
 console.log(nuoviScore);
+
+// STAMPO SU SCHERMO I RISULTATI
+applyTemplate(containerDefault, squadre);
+applyTemplate(containerAfter, nuoviScore);
