@@ -43,16 +43,16 @@ let proprietarioMinore;
 // CICLO TUTTO L'ARRAY DI BICI
 biciclette.forEach(element => {
     // FACCIO IL DESTRUCTURING DELL'ELEMENTO 
-    const { peso,nome } = element;
+    const { peso, nome } = element;
 
     // SE LA VARIABILE CHE DOVRA' CONTENERE IL PESO NON E' DEFINITA IMPOSTO IL PESO DEL PRIMO
     // NOME COME PESO MINORE 
     if (pesoMinore === undefined) {
         pesoMinore = peso;
-
+    }
     // INVECE SE IL PESO DELL'ELEMENTO IN ANALISI E' MINORE DELLA VARIABILE CONTENENTE IL PESO
     // MINORE IMPOSTO QUELLO COME PESO MINORE E SALVO IL NOME DEL PROPRIETARIO DELLA BICI 
-    } else if (peso < pesoMinore) {
+    else if (peso < pesoMinore) {
         pesoMinore = peso
         proprietarioMinore = nome;
     }
