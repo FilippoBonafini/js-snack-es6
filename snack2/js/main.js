@@ -59,22 +59,21 @@ const ulContainerstudentiSelezionati = document.getElementById('studentiSelezion
 
 
 // FUNZIONE PER CREARE I LI PARTENDO DA UN TEMPLATE 
-function applyTemplate(templateContainer,arrayDiPartenza) {
-    for (let i = 0; i < arrayDiPartenza.length; i++) {
-        const studente = arrayDiPartenza[i];
+function applyTemplate(templateContainer, arrayDiPartenza) {
+    arrayDiPartenza.forEach(element => {
         const studentiTemplate = template.content.cloneNode(true);
 
-        studentiTemplate.querySelector('.idStudente').innerHTML = studente.id;
-        studentiTemplate.querySelector('.nomeStudente').innerHTML = studente.name;
-        studentiTemplate.querySelector('.votiStudente').innerHTML = studente.grades;
+        studentiTemplate.querySelector('.idStudente').innerHTML = element.id;
+        studentiTemplate.querySelector('.nomeStudente').innerHTML = element.name;
+        studentiTemplate.querySelector('.votiStudente').innerHTML = element.grades;
 
         templateContainer.append(studentiTemplate);
-    }
+    });
 }
 
-applyTemplate(ulContainerStudenti,studenti);
-applyTemplate(ulContainerstudentiBravi,studentiBravi);
-applyTemplate(ulContainerstudentiSelezionati,studentiSelezionati);
+applyTemplate(ulContainerStudenti, studenti);
+applyTemplate(ulContainerstudentiBravi, studentiBravi);
+applyTemplate(ulContainerstudentiSelezionati, studentiSelezionati);
 
 for (let i = 0; i < studentiMaiuscoli.length; i++) {
     const studente = studentiMaiuscoli[i];
